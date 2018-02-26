@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    img {
+        display: block;
+        width: 600px;
+        height: auto;
+    }
+    div {
+        display: block;
+        width: 600px;
+        padding-bottom: 40%
+    }
+    /* color pencil */
+    .ion-effects-colorpen {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+    @supports (filter: invert(1)) and (mix-blend-mode: color) {
+        .ion-effects-colorpen {
+          position: relative;
+        }
+        .ion-effects-colorpen:before, .ion-effects-colorpen:after {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-size: cover;
+          box-shadow: inset 0 0 0 1px black;
+        }
+        .ion-effects-colorpen:before {
+          background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+          background-blend-mode: difference;
+          background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+          filter: brightness(2) invert(1) grayscale(1);
+        }
+        .ion-effects-colorpen:after {
+          background: inherit;
+          mix-blend-mode: color;
+        }
+      }
+
+    /* flannel */
+    .ion-effects-flannel {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (background-blend-mode: overlay) {
+        .ion-effects-flannel {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-position: center;
+            background-size: 100%, 100000% 100%, 100% 100000%;
+            background-blend-mode: overlay;
+        }
+    }
+
+    /* low ink */
+    .ion-effects-lowink {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (background-blend-mode: screen, overlay) {
+        .ion-effects-lowink {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-size: 100% 100%, 100% 1000%;
+            background-blend-mode: screen, overlay;
+        }
+    }
+
+    /* photo border */
+    .ion-effects-border {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-position: center;
+        background-size: 60%, 20%;
+        background-repeat: no-repeat, repeat;
+    }
+
+    /* warhole */
+    .ion-effects-warhol {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (background-blend-mode: color) {
+        .ion-effects-warhol {
+            background-image: linear-gradient(#14EBFF 0, #14EBFF 50%, #FFFF70 50%, #FFFF70 100%), linear-gradient(#FF85DA 0, #FF85DA 50%, #AAA 50%, #AAA 100%), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-size: 50% 100%, 50% 100%, 50% 50%;
+            background-position: top left, top right;
+            background-repeat: no-repeat, no-repeat, repeat;
+            background-blend-mode: color;
+        }
+    }
+
+    /* mirror */
+    .ion-effects-mirror {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (transform: scaleY(-1)) {
+        .ion-effects-mirror {
+            position: relative;
+        }
+        .ion-effects-mirror:before, .mirror-y-effect:after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: inherit;
+        }
+        .ion-effects-mirror:before {
+            top: 0;
+            bottom: 50%;
+            transform: scaleY(-1);
+        }
+        .ion-effects-mirror:after {
+            top: 50%;
+            bottom: 0;
+        }
+    }
+
+    /* pencil */
+    .ion-effects-pencil {
+        background-image: url(photo.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (filter: invert(1)) and (background-blend-mode: difference) {
+        .ion-effects-pencil {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-blend-mode: difference;
+            background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+            filter: brightness(2) invert(1) grayscale(1);
+            box-shadow: inset 0 0 0 1px black;
+        }
+    }
+
+    /* emboss */
+    .ion-effects-emboss {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (filter: invert(1)) and (background-blend-mode: difference, screen) {
+        .ion-effects-emboss {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-blend-mode: difference, screen;
+            background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px), center;
+            filter: brightness(2) invert(1) grayscale(1);
+        }
+    }
+
+    /* color chalkboards */
+    .ion-effects-chalkboards {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (filter: brightness(2)) and (background-blend-mode: color, difference) {
+        .ion-effects-chalkboards {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-size: cover;
+            background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px), center;
+            background-blend-mode: color, difference;
+            filter: brightness(2);
+        }
+    }
+
+    /* hallucination */
+    .ion-effects-hallucination {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (mix-blend-mode: multiply) {
+        .ion-effects-hallucination {
+            position: relative;
+            overflow: hidden;
+            background-color: magenta;
+            background-blend-mode: screen;
+        }
+        .ion-effects-hallucination:before, .ion-effects-hallucination:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            mix-blend-mode: multiply;
+            transform: scale(1.05);
+        }
+        .ion-effects-hallucination:before {
+            background-color: yellow;
+            background-blend-mode: screen;
+            transform-origin: top left;
+        }
+        .ion-effects-hallucination:after {
+            background-color: cyan;
+            background-blend-mode: screen;
+            transform-origin: bottom right;
+        }
+    }
+
+    /* collage */
+    .ion-effects-collage {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (background-blend-mode: overlay) {
+        .ion-effects-collage {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-size: 200%, 80%, 60%, 50%, 40%, 100%;
+            background-position: 50%, 80%, 30%, 0;
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+        }
+    }
+
+    /* infrared */
+    .ion-effects-infrared {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+        filter: hue-rotate(180deg) saturate(2);
+    }
+
+    /* selective */
+    .ion-effects-selective {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (filter: brightness(3)) and (mix-blend-mode: color) {
+        .ion-effects-selective {
+            position: relative;
+        }
+        .ion-effects-selective:before, .ion-effects-selective:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            background-color: red;
+            background-blend-mode: screen;
+            mix-blend-mode: color;
+            filter: brightness(3);
+        }
+    }
+
+    /* water color */
+    .ion-effects-watercolor {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (filter: blur(2px)) and (mix-blend-mode: multiply) {
+        .ion-effects-watercolor {
+            position: relative;
+            overflow: hidden;
+        }
+        .ion-effects-watercolor:before, .ion-effects-watercolor:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+        }
+        .ion-effects-watercolor:before {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-blend-mode: difference;
+            background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+            filter: brightness(2) invert(1) grayscale(1);
+            box-shadow: inset 0 0 0 1px black;
+        }
+        .ion-effects-watercolor:after {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-position: center;
+            mix-blend-mode: multiply;
+            filter: brightness(1.3) blur(2px) contrast(2);
+        }
+    }
+
+    /* single chalkboard */
+    .ion-effects-singlechalk {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (filter: grayscale(1)) and (background-blend-mode: difference) {
+        .ion-effects-singlechalk {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-blend-mode: difference;
+            background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+            filter: brightness(1.5) grayscale(1);
+        }
+    }
+
+    /* air brush */
+    .ion-effects-airbrush {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (filter: blur(5px) contrast(5)) and (mix-blend-mode: multiply) {
+        .ion-effects-airbrush {
+            position: relative;
+            overflow: hidden;
+        }
+        .ion-effects-airbrush:after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: brightness(1.5) saturate(100) blur(5px) contrast(5);
+            mix-blend-mode: multiply;
+        }
+    }
+
+    /* low ink horizontal */
+    .ion-effects-hoziink {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (background-blend-mode: screen, overlay) {
+        .ion-effects-hoziink {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+            background-size: 100% 100%, 10000% 100%;
+            background-blend-mode: screen, overlay;
+        }
+    }
+
+    /* mosaic */
+    .ion-effects-mosaic {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover, 5% 5%;
+        background-position: center;
+        background-blend-mode: overlay;
+    }
+
+    /* night vision */
+    .ion-effects-nightvision {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png), radial-gradient(#0F0, #000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 2.5px, transparent 5px);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+    }
+
+    /* mirror horizontal */
+    .ion-effects-hozimirror {
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @supports (transform: scaleX(-1)) {
+        .ion-effects-hozimirror {
+            position: relative;
+        }
+        .ion-effects-hozimirror:before, .ion-effects-hozimirror:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background: inherit;
+        }
+        .ion-effects-hozimirror:before {
+            left: 0;
+            right: 50%;
+            transform: scaleX(-1);
+        }
+        .ion-effects-hozimirror:after {
+            left: 50%;
+            right: 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5645a160880603.5a5cbd3a366e3.png" alt="test">
+    <div class="ion-effects-colorpen"></div>
+    <div class="ion-effects-flannel"></div>
+    <div class="ion-effects-lowink"></div>
+    <div class="ion-effects-border"></div>
+    <div class="ion-effects-warhol"></div>
+    <div class="ion-effects-mirror"></div>
+    <div class="ion-effects-pencil"></div>
+    <div class="ion-effects-emboss"></div>
+    <div class="ion-effects-chalkboards"></div>
+    <div class="ion-effects-hallucination"></div>
+    <div class="ion-effects-collage"></div>
+    <div class="ion-effects-infrared"></div>
+    <div class="ion-effects-selective"></div>
+    <div class="ion-effects-watercolor"></div>
+    <div class="ion-effects-singlechalk"></div>
+    <div class="ion-effects-airbrush"></div>
+    <div class="ion-effects-hoziink"></div>
+    <div class="ion-effects-mosaic"></div>
+    <div class="ion-effects-nightvision"></div>
+    <div class="ion-effects-hozimirror"></div>
+</body>
+</html>

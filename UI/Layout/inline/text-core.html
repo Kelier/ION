@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!--网站编码格式，UTF-8 国际编码，GBK或 gb2312 中文编码-->
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="Keywords" content="关键词一，关键词二">
+        <meta name="Description" content="网站描述内容">
+        <meta name="Author" content="Yvette Lau">
+        <title>text-core</title>
+        <!--css js 文件的引入-->
+        <style>
+            .ion-paragraph{
+                background:rgb(228, 255, 233);
+                width:250px;
+                margin:50px auto;
+                padding:20px;
+                font-family:"microsoft yahei";
+            }
+            /* 强制不换行 */
+            .ion-paragraph-nowrap{
+                white-space:nowrap;
+            }
+            /* 允许单词内断句，首先会尝试挪到下一行，看看下一行的宽度够不够，不够的话就进行单词内的断句 */
+            .ion-paragraph-breakword{
+                word-wrap: break-word;
+            }
+            /* 断句时，不会把长单词挪到下一行，而是直接进行单词内的断句 */
+            .ion-paragraph-breakAll{
+                word-break:break-all;
+            }            
+            /* 超出部分显示省略号 */
+            .ion-paragraph-ellipsis{
+                text-overflow:ellipsis;
+                overflow:hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "ion-paragraph">
+            <p class = "ion-paragraph-nowrap">wordwrap:breakword;absavhsafhuafdfbjhfvsalguvfaihuivfs</p>          
+            <p class = "ion-paragraph-breakword">wordwrap:break-word;absavhsafhuafdfbjhfvsalguvfaihui</p>
+            <p class = "ion-paragraph-breakAll">wordwrap:break-word;absavhsafhuafdfbjhfvsalguvfaihuivf</p>
+            <p class = "ion-paragraph-normal">wordwrap:breakword;absavhsafhuafdfbjhfvsalguvfaihuivfsa</p>
+            <p class = "ion-paragraph-ellipsis">wordwrap:breakword;absavhsafhuafdfbjhfvsalguvfaihuivfsab</p>
+        </div>
+    </body>
+</html>

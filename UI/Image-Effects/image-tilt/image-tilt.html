@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Tilt Effect</title>
+    <link rel="stylesheet" type="text/css" href="image-tilt.css"/>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="ion-content">
+        <h2 class="ion-poster-headline">How it works</h2>
+        <p class="ion-poster-text">A normal image is replaced with layers of semi-transparent divisions of the same image.
+            Every layer moves according to the configuration, creating a subtle motion effect.</p>
+        <p class="ion-poster-text"><strong>Hover over the grid images to see how the effect works:</strong></p>
+        <ul class="ion-grid ion-grid-xray">
+            <li class="ion-grid-item">
+                <div class="ion-grid-img ion-grid-img-border">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/abf4b562005267.5a81bc7aad34b.jpg" class="tilt-effect" alt="grid01"/>
+                </div>
+                <div class="ion-grid-item-title">
+                    Default options:
+                    <pre><code>"extraImgs" : 2,
+                    "opacity" : 0.7,
+                    "bgfixed" : true,
+                    "movement": {
+                        "perspective" : 1000,
+                        "translateX" : -10,
+                        "translateY" : -10,
+                        "translateZ" : 20,
+                        "rotateX" : 2,
+                        "rotateY" : 2,
+                        "rotateZ" : 2
+}</code></pre>
+                </div>
+            </li>
+            <li class="ion-grid-item">
+                <div class="ion-grid-img ion-grid-img-border">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/e683ae62005267.5a81b613e5ded.jpg" class="tilt-effect"
+                         data-tilt-options='{ "extraImgs" : 4, "opacity" : 0.5, "movement": { "perspective" : 500, "translateX" : -15, "translateY" : -15, "translateZ" : 20, "rotateX" : 15, "rotateY" : 15 } }'
+                         alt="grid01"/>
+                </div>
+                <div class="ion-grid-item-title">
+                    Options:
+                    <pre><code>"extraImgs" : 4,
+                    "opacity" : 0.5,
+                    "bgfixed" : true,
+                    "movement": {
+                        "perspective" : 500,
+                        "translateX" : -15,
+                        "translateY" : -15,
+                        "translateZ" : 20,
+                        "rotateX" : 15,
+                        "rotateY" : 15
+}</code></pre>
+                </div>
+            </li>
+
+            <li class="ion-grid-item">
+                <div class="ion-grid-img ion-grid-img-border">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/3331a262005267.5a81b613e5aee.jpg" class="tilt-effect"
+                         data-tilt-options='{ "bgfixed" : false, "movement": { "perspective" : 1000, "translateX" : 30, "translateY" : 30, "translateZ" : -50, "rotateX" : 3, "rotateY" : 3, "rotateZ" : 10 } }'
+                         alt="grid01"/>
+                </div>
+                <div class="ion-grid-item-title">
+                    Options:
+                    <pre><code>"extraImgs" : 2,
+            "opacity" : 0.7,
+            "bgfixed" : false,
+            "movement": {
+                "perspective" : 1000,
+                "translateX" : 30,
+                "translateY" : 30,
+                "translateZ" : -50,
+                "rotateX" : 0,
+                "rotateY" : 0,
+                "rotateZ" : 10,
+}</code></pre>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ion-content">
+        <h2 class="ion-poster-headline">Options</h2>
+        <p class="ion-poster-text">A normal image is replaced with layers of semi-transparent divisions of the same image.
+            Each layer gets moved in 3D, creating a subtle illusion of perspective.</p>
+        <dl class="def-list">
+            <dt><strong>extraImgs</strong></dt>
+            <dd>
+                <p>Number of extra background-image divisions; min:1, max:5</p>
+                <p><code>extraImgs : 2</code></p>
+            </dd>
+            <dt><strong>opacity</strong></dt>
+            <dd>
+                <p>The opacity value for the background-image divisions</p>
+                <p><code>opacity : 0.7</code></p>
+            </dd>
+            <dt><strong>bgfixed</strong></dt>
+            <dd>
+                <p>Movement of first layer; by default it's not moving</p>
+                <p><code>bgfixed : true</code></p>
+            </dd>
+            <dt><strong>movement</strong></dt>
+            <dd>
+                <p>The movemement configuration for each background-image division</p>
+                <p><code>movement : { ... }</code></p>
+                <dl class="def-list">
+                    <dt><strong>perspective</strong></dt>
+                    <dd>
+                        <p>The perspective value for the 3D transforms</p>
+                        <p><code>perspective : 1000</code></p>
+                    </dd>
+                    <dt><strong>translateX</strong></dt>
+                    <dd>
+                        <p>The relative movement on the x-axis. A positive value will move the background-image
+                            divisions in the same direction like the mouse up to the amount defined (in pixel). A
+                            negative value reverses the direction, i.e. moves the division into the opposite direction
+                            of the mouse.</p>
+                        <p><code>translateX : -10</code></p>
+                    </dd>
+                    <dt><strong>translateY</strong></dt>
+                    <dd>
+                        <p>The relative movement on the y-axis.</p>
+                        <p><code>translateY : -10</code></p>
+                    </dd>
+                    <dt><strong>translateZ</strong></dt>
+                    <dd>
+                        <p>The relative movement on the z-axis. This specific translation is done when the mouse moves
+                            vertically. A perspective value needs to be set.</p>
+                        <p><code>translateZ : 20</code></p>
+                    </dd>
+                    <dt><strong>rotateX</strong></dt>
+                    <dd>
+                        <p>The relative rotation on the y-axis. A perspective value needs to be set.</p>
+                        <p><code>rotateX : 2</code></p>
+                    </dd>
+                    <dt><strong>rotateY</strong></dt>
+                    <dd>
+                        <p>The relative rotation on the y-axis. A perspective value needs to be set.</p>
+                        <p><code>rotateY : 2</code></p>
+                    </dd>
+                    <dt><strong>rotateZ</strong></dt>
+                    <dd>
+                        <p>The relative rotation on the Z-axis. A perspective value needs to be set.</p>
+                        <p><code>rotateZ : 0</code></p>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+        <p>Add the class "tilt-effect" to the respective image. The image container should have an explicit width and
+            height.</p>
+        <p>To initialize either set the options in "data-tilt-options" or initialize with JavaScript: <code>new
+            TiltFx(element, options)</code></p>
+    </div>
+
+    <div class="ion-content">
+        <h2 class="ion-poster-headline">Examples</h2>
+        <ul class="ion-grid ion-grid-demo">
+            <li class="ion-grid-item">
+                <div class="ion-grid-img ion-grid-img-demo-1">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/244f6562005267.5a81b613e8dbc.jpg" class="tilt-effect" alt="grid01"
+                         data-tilt-options='{ "opacity" : 0.3, "extraImgs" : 3, "movement": { "perspective" : 1200, "translateX" : -5, "translateY" : -5, "rotateX" : -5, "rotateY" : -5 } }'/>
+                </div>
+            </li>
+            <li class="ion-grid-item">
+                <div class="ion-grid-img ion-grid-img-demo-2">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/aa6cd062005267.5a81b613e60ca.jpg" class="tilt-effect" alt="grid02"
+                         data-tilt-options='{ "movement": { "perspective" : 700, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }'/>
+                </div>
+            </li>
+            <li class="ion-grid-item">
+                <div class="ion-grid-img ion-grid-img-demo-3">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/acb3fe62005267.5a81bc7aad9af.jpg" class="tilt-effect" alt="grid03"
+                         data-tilt-options='{ "opacity" : 0.6, "extraImgs" : 4, "movement": { "perspective" : 500, "translateX" : 15, "translateY" : 0, "translateZ" : 10, "rotateX" : 3, "rotateY" : 4, "rotateZ" : 1 } }'/>
+                </div>
+            </li>
+            <li class="ion-grid-item">
+                <div class="ion-grid-img ion-grid-img-demo-4">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/900c6062005267.5a81b613e7a56.jpg" class="tilt-effect" alt="grid04"
+                         data-tilt-options='{ "opacity" : 0.8, "bgfixed" : false, "extraImgs" : 3, "movement": { "perspective" : 1500, "translateX" : 80, "translateY" : 80, "translateZ" : 0, "rotateY" : 20 } }'/>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div><!-- /container -->
+
+<script src="image-tilt.js"></script>
+<script>
+    (function() {
+        [].slice.call(document.querySelectorAll('img.tilt-effect')).forEach(function(img) {
+            ion.tilt(img, JSON.parse(img.getAttribute('data-tilt-options')));
+		});
+    })();
+</script>
+</body>
+</html>
+

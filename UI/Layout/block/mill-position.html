@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mill-position</title>
+<style>
+/* ================ traditional ===============    IE6+ */
+html, body, main{
+    height:100%;
+    overflow:hidden;
+}
+.ion-header{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: #19B3A6
+}
+.ion-navbar{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    bottom: 50px;
+    width: 200px;
+    background: #814848
+}
+.ion-area{
+    position: absolute;
+    left: 200px;
+    right: 0;
+    top: 100px;
+    bottom: 50px;
+    background: #3F509B;
+    overflow:auto;
+}
+.ion-footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background: #633751
+}
+
+.ion-area-inner{
+    min-height:1000px;
+}
+</style>
+</head>
+<body>
+    <main>
+        <div class ="ion-header">top</div>
+        <div class ="ion-navbar">left</div>
+        <div class ="ion-area">right
+            <div class="ion-area-inner">
+            </div>
+        </div>
+        <div class ="ion-footer">bottom</div>
+    </main>
+</body>
+</html>

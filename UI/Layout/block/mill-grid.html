@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mill-grid</title>
+<style>
+/* ================ modern grid ===============    10+ */
+html, body, main{
+    height: 100%;
+    margin: 0;
+}
+main{
+    display: grid;
+    grid-template-rows:50px auto 50px;
+}
+.ion-header{
+    background: #19B3A6
+}
+.ion-container-footer{
+    height:50px;
+    background: #814848
+}
+.ion-container{
+    overflow:hidden;
+    display:grid;
+    grid-template-columns: 100px 1fr;
+}
+.ion-container-left{
+    background: #3F509B;
+}
+.ion-container-right{
+    overflow:auto;
+    background: #633751
+}
+</style>
+</head>
+<body>
+<main>
+    <div class ="ion-header"></div>
+    <div class ="ion-container">
+        <div class ="ion-container-left"></div>
+        <div class ="ion-container-right"></div>
+    </div>
+    <div class ="ion-container-footer"></div>
+</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>parallax</title>
+</head>
+<style>
+/* IE 9+, Safari, Chrome, Opera, Firefox */
+
+body, html, main {
+    /* important */
+    height: 100%;
+}
+
+.ion-layout-parallax {
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+ 
+.ion-layout-parallax.gallery-1 {
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/3df75361886913.5a7cd29d32665.png");
+}
+.ion-layout-parallax.gallery-2 {
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/0b4ab561514305.5a7102881f147.jpg");
+}
+.ion-layout-parallax.gallery-3 {
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/2f860459882179.5a59144b1c642.jpg");
+}
+.ion-layout-parallax.gallery-4 {
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/c9639360472087.5a78e69672f72.jpg");
+}
+.ion-layout-parallax-content {
+    min-height: 100%;
+}
+</style>
+
+<body>
+    <main>
+        <div class="ion-layout-parallax gallery-1">
+            <h1>标题</h1>
+        </div> 
+        
+        <div class="ion-layout-parallax-content">
+                <p>内容...</p>
+        </div>
+        
+        <div class="ion-layout-parallax gallery-2">
+            <h1>标题</h1>
+        </div> 
+        
+        <div class="ion-layout-parallax-content">
+                <p>内容...</p>
+        </div>
+
+        <div class="ion-layout-parallax gallery-3">
+            <h1>标题</h1>
+        </div> 
+        
+        <div class="ion-layout-parallax-content">
+                <p>内容...</p>
+        </div>
+
+        <div class="ion-layout-parallax gallery-4">
+            <h1>标题</h1>
+        </div> 
+    </main>
+</body>
+</html>

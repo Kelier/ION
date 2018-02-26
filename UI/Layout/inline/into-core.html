@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>into-core</title>
+    <style>
+    .ion-center-1{
+      width: 300px;
+      height: 300px;
+      position: relative;
+      border: 1px solid #465468;
+    }
+    .ion-center-1 img{
+        position: absolute;
+        width: 80%;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .ion-center-2{
+      width: 500px;
+      height: 400px;
+      border: 2px solid #379;
+      position: relative;
+    }
+    .ion-center-2 div{
+        width: 480px;
+        height: 380px;
+        background-color: #746;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -190px; /*height的一半*/
+        margin-left: -240px; /*width的一半*/
+    }
+    .ion-center-3{
+        width: 260px;
+        height: 230px;
+        border: 3px solid #555;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .ion-center-3 img{
+        vertical-align: middle;
+        margin: 20px;
+    }
+    .ion-center-4{
+        position:relative;
+        height: 400px;
+    }
+    .ion-center-4 img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 80%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+    </style>
+</head>
+<body>
+    <div class="ion-center-1">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/1f2e1b61681783.5a766fdd6031b.jpg">
+    </div>
+
+    <div class="ion-center-2">
+        <div></div>
+    </div>
+
+    <div class="ion-center-3">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/1f2e1b61681783.5a766fdd6031b.jpg">
+    </div>
+
+    <div class="ion-center-4">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/1f2e1b61681783.5a766fdd6031b.jpg">
+    </div>
+</body>
+</html>

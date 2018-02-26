@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>img-cover</title>
+    <style>
+        /* 伪类实现 */
+        .ion-imgbox-cover{
+            width:200px;
+            height: 140px;
+            position:relative;
+            overflow: hidden;
+        }
+        img{
+            width:100%;
+            height: 100%;
+            display: block;
+        }
+        .ion-imgbox-cover:after{
+            position:absolute;
+            left: 0;
+            top:0;
+            display: block;
+            width:100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            content: attr(data-text);
+            transition:all 1s ease;
+            transform: translateY(-100%);
+            color: #FFF;
+        }
+        .ion-imgbox-cover:hover:after{
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="ion-imgbox-cover">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ce5b0638144191.5757196a30c4f.png" alt="">
+    </div>
+</body>
+</html>

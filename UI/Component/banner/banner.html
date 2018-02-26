@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="banner.css">
+    <title>banner</title>
+
+</head>
+<body>
+
+<div class="ion-banner" id="banner1">
+    <div class="ion-banner-view"></div>
+    <div class="ion-banner-btn"></div>
+    <div class="ion-banner-number"></div>
+    <div class="ion-banner-progres"></div>
+</div>
+
+<script type="text/javascript" src="banner.js"></script>
+<script type="text/javascript">
+    var options = {
+        container: "#banner1",//选择容器 必选
+        imgs: ['https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/f70b4859601307.5a28303a5b906.jpg', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/2e478559601307.5a28303a5ad7b.jpg', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/c5b35859601307.5a28303a58f1a.jpg', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/9ffcc359601307.5a28303a57a3c.jpg', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/812a2059601307.5a28303a592aa.jpg'],//图片集合 必选
+        size: {
+            width: 1000,
+            height: 560
+        },
+        //容器的大小 可选
+        //行数与列数 可选
+        grid: {
+            line: 12,
+            list: 14
+        },
+        index: 0,//图片集合的索引位置 可选
+        type: 2,//切换类型 1 ， 2 可选
+        boxTime: 5000,//小方块来回运动的时长 可选
+        fnTime: 10000//banner切换的时长 可选
+    }
+    ion.initBanner(options);
+
+</script>
+</body>
+</html>
