@@ -1,0 +1,34 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>city</title>
+</head>
+<body>
+<div class="info">
+    <div>
+        <select id="s_province" name="s_province"></select>
+        <select id="s_city" name="s_city"></select>
+        <select id="s_country" name="s_country"></select>
+        <script src="city.js"></script>
+
+        <script type="text/javascript">
+            var s = ["s_province", "s_city", "s_country"];//三个select的name
+            var opt0 = ["省份", "地级市", "市、县级市"];//初始值
+
+            for (var i = 0; i < s.length - 1; i++) {
+                (function (i) {
+                document.getElementById(s[i]).onchange = function () {
+                    ion.city(i+1);
+                }
+                })(i);
+            }
+            ion.city(0);
+        </script>
+    </div>
+    <div id="show"></div>
+</div>
+</body>
+</html>
