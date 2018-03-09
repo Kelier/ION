@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+    <style>
+        .tag-list {
+            list-style: none;
+            position: relative;
+            display: block;
+            padding-left: 2px;
+            width: 130px;
+            top: 0px;
+            margin: 5px 0;
+            border-radius: 2px;
+        }
+
+        .tag-list li {
+            padding: 5px 10px;
+            color: #bb7575;
+        }
+
+        .tag-list li:hover {
+            background: #9cd4a3;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input class="tag-load" type="text">
+    <ul class="tag-list"></ul>
+</div>
+<script>
+
+    function regList(list, keyWord) {
+        var len = list.length;
+        var arr = [];
+        var reg = new RegExp(keyWord);
+        for (var i = 0; i < len; i++) {
+            //如果字符串中不包含目标字符会返回-1
+            if (list[i].match(reg)) {
+                arr.push(list[i]);
+            }
+        }
+        return arr;
+    }
+
+    var tagName = document.querySelector('.tag-load');
+    var tagList = document.querySelector('.tag-list');
+    var list = ['china', 'japan', 'russian'];
+    tagName.addEventListener('focus', function () {
+        tagList.style.display = 'block';
+        tagName.addEventListener('input', function (e) {
+            console.log(e.target || '');
+            var keyword = e.target.value;
+            var arr = regList(list, keyword);
+            var temp = '';
+            for (var i = 0; i < arr.length; i++) {
+                temp += '<li>' + arr[i] + '</li>';
+            }
+            tagList.innerHTML = temp;
+            console.log(arr);
+        });
+    });
+    tagList.addEventListener('click', function (e) {
+        if (e.target && e.target.nodeName.toUpperCase() === 'LI') {
+            tagName.value = e.target.innerHTML;
+            tagList.style.display = 'none';
+        }
+    });
+    
+    document.addEventListener('click',function (e) {
+        console.log(e.target.classList.value)
+        if (e.target.classList.value !== 'tag-load') {
+            tagList.style.display = 'none';
+        }
+    })
+        
+
+</script>
+</body>
+</html>

@@ -24,6 +24,7 @@ includes:
     - multitab
     - scroll-sound
     - sort_drag
+    - city && select
   - Image-Effects
     - mulity-filter
     - glitch
