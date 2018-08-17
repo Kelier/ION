@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39658944-b181-43df-8471-7316897bf1a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/10.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/8.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/9.gif" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -179,7 +182,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20476000" />
+    <option name="totallyTimeSpent" value="20527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
