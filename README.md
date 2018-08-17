@@ -1,7 +1,7 @@
 
 <center>
-### ION
-
+<div style="font-size:80px;text-shadow:7px 6px 15px #eee;letter-space:10px">ION</div>
+<img src="CUTS/bar.png" />
 ![no-depend](https://img.shields.io/gemnasium/mathiasbynens/he.svg)
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg)
 
