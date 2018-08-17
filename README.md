@@ -1,6 +1,7 @@
 
 <center>
-<div style="font-size:80px;text-shadow:7px 6px 15px #eee;letter-space:10px">ION</div>
+
+# I O N
 
 <img src="CUTS/bar.png" />
 
