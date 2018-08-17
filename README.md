@@ -53,43 +53,43 @@ includes:
 
 > backmatrix
 
-![](/CUTS/1.gif)
+![](CUTS/1.gif)
 
 > cursor-follow
 
-![](/CUTS/2.gif)
+![](CUTS/2.gif)
 
 > snow-around
 
-![](/CUTS/3.gif)
+![](CUTS/3.gif)
 
 > star-galaxy
 
-![](/CUTS/4.gif)
+![](CUTS/4.gif)
 
 > banner
 
-![](/CUTS/5.gif)
+![](CUTS/5.gif)
 
 > city
 
-![](/CUTS/6.png)
+![](CUTS/6.png)
 
 > date
 
-![](/CUTS/7.gif)
+![](CUTS/7.gif)
 
 > hint
 
-![](/CUTS/8.gif)
+![](CUTS/8.gif)
 
 > loader
 
-![](/CUTS/9.gif)
+![](CUTS/9.gif)
 
 > multitab
 
-![](/CUTS/10.gif)
+![](CUTS/10.gif)
 
 > scroll-sound 
 
@@ -97,78 +97,78 @@ includes:
 
 > input hint
 
-![](/CUTS/11.gif)
+![](CUTS/11.gif)
 
 > sort_drag
 
-![](/CUTS/12.gif)
+![](CUTS/12.gif)
 
 > mulity-filter
 
-![](/CUTS/13.gif)
+![](CUTS/13.gif)
 
 > glitch
 
-![](/CUTS/14.gif)
+![](CUTS/14.gif)
 
 > tilt
 
-![](/CUTS/15.gif)
+![](CUTS/15.gif)
 
 > grail 常规布局
 
-![](/CUTS/16.png)
+![](CUTS/16.png)
 
 > flex 常规布局
 
-![](/CUTS/17.png)
+![](CUTS/17.png)
 
 > grid 常规布局
 
-![](/CUTS/18.png)
+![](CUTS/18.png)
 
 > position 常规布局
 
-![](/CUTS/19.png)
+![](CUTS/19.png)
 
 > 视觉差
 
-![](/CUTS/20.gif)
+![](CUTS/20.gif)
 
 > grid 瀑布流
 
-![](/CUTS/21.png)
+![](CUTS/21.png)
 
 > 常规 瀑布流
 
-![](/CUTS/22.gif)
+![](CUTS/22.gif)
 
 > 行内grid
 
-![](/CUTS/23.png)
+![](CUTS/23.png)
 
 > img cover
 
-![](/CUTS/24.gif)
+![](CUTS/24.gif)
 
 > img 居中
 
-![](/CUTS/25.gif)
+![](CUTS/25.gif)
 
 > text 样式
 
-![](/CUTS/26.png)
+![](CUTS/26.png)
 
 > 卡片机制
 
-![](/CUTS/27.gif)
+![](CUTS/27.gif)
 
 > pure nav
 
-![](/CUTS/28.gif)
+![](CUTS/28.gif)
 
 > ripple nav
 
-![](/CUTS/29.gif)
+![](CUTS/29.gif)
 
 ----NO END ----
