@@ -1,7 +1,11 @@
+
+<center>
 ### ION
 
 ![no-depend](https://img.shields.io/gemnasium/mathiasbynens/he.svg)
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg)
+
+</center>
 
 collect any interestring thoughts.
 
@@ -15,30 +19,35 @@ includes:
 
 - UI
   - Background [背景特效]
-    - backmatrix
-    - cursor-follow
-    - snow-around
-    - star-galaxy
+    - backmatrix  [黑客帝国]
+    - cursor-follow  [鼠标跟随]
+    - snow-around  [雪景]
+    - star-galaxy  [星系]
   - Component [基本组件]
-    - banner
-    - date
-    - hint
-    - loader
-    - multitab
-    - scroll-sound
-    - sort_drag
-    - city && select
+    - banner  [轮播图]
+    - city && select  [城市选择器]
+    - date  [日期选择器]
+    - hint  [文字提示]
+    - loader  [加载中]
+    - multitab  [目录切换]
+    - scroll-sound  [会放屁的滚动条]
+    - sort_drag  [可拖拽的表格]
   - Image-Effects [图像效果]
-    - mulity-filter
-    - glitch
-    - tilt
+    - mulity-filter  [css滤镜]
+    - glitch  [行尸走肉]
+    - tilt  [视觉欺骗]
   - Layout [布局选项]
-    - block
-    - inline
-    - carrousel
+    - block  [块布局]
+    - inline  [行内布局]
+    - carrousel  [旋转木马]
   - Media [媒体]
-    - nav-pure
-    - nav-water
+    - nav-pure  [动画导航-expand]
+    - nav-water  [动画导航-wave]
+
+---
+
+#### Show List
+
 
 
 ----NO END ----
