@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39658944-b181-43df-8471-7316897bf1a6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CUTS/4.gif" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -116,7 +118,7 @@
             <path>
               <item name="ION" type="b2602c69:ProjectViewProjectNode" />
               <item name="ION" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="CUTS" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -177,7 +179,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20289000" />
+    <option name="totallyTimeSpent" value="20476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
